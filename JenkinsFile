@@ -4,7 +4,7 @@ pipeline {
         stage ('Checkout') {
             steps {
                 script {
-                    git([url: 'https://github.com/sudheermanubolu/devops-week9.git', branch: 'main'])
+                    git([url: 'https://github.com/sudheermanubolu/devops-week9.git', branch: '${env.BRANCH_NAME}'])
                 }
             }
         }
